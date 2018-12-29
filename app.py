@@ -3,6 +3,9 @@ from models.post import Post
 
 Database.initialize()
 
-post = Post()
+post = Post.from_mongo('b1c95b9aeb364627ad87168cde32b31f')
+print(post)
 
-print(post.author)
+posts = Post.from_blog('123')
+for p in posts:
+    print(p)
