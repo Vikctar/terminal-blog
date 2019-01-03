@@ -1,4 +1,5 @@
 from database import Database
+from menu import Menu
 from models.blog import Blog
 from models.post import Post
 
@@ -13,10 +14,14 @@ blog = Blog(author='Vikc',
             title='New New',
             description='New description')
 
-blog.new_post()
+# blog.new_post()
 
-blog.save_to_mongo()
+# blog.save_to_mongo()
 
-from_database = Blog.from_mongo(blog.id)
+# from_database = Blog.from_mongo(blog.id)
 
-print(blog.get_posts())
+# print(blog.get_posts())
+
+menu = Menu()
+
+menu.run_menu()
